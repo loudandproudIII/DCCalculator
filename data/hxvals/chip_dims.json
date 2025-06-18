@@ -1,0 +1,223 @@
+{
+  "chip_configurations": {
+    "standard_gpu": {
+      "name": "Standard GPU Configuration",
+      "layers": [
+        {
+          "name": "die",
+          "thickness": 0.000775,
+          "area": 0.0004,
+          "material": "silicon",
+          "notes": "GPU die - 20mm x 20mm"
+        },
+        {
+          "name": "tim1",
+          "thickness": 5e-05,
+          "area": 0.0004,
+          "material": "tim_standard",
+          "notes": "Die to IHS interface"
+        },
+        {
+          "name": "ihs",
+          "thickness": 0.0012,
+          "area": 0.0016,
+          "material": "copper",
+          "notes": "Integrated Heat Spreader - 40mm x 40mm"
+        },
+        {
+          "name": "tim2",
+          "thickness": 2e-05,
+          "area": 0.0016,
+          "material": "tim_standard",
+          "notes": "IHS to cooler interface"
+        }
+      ]
+    },
+    "high_performance_gpu": {
+      "name": "High Performance GPU",
+      "layers": [
+        {
+          "name": "die",
+          "thickness": 0.000775,
+          "area": 0.000625,
+          "material": "silicon",
+          "notes": "Large GPU die - 25mm x 25mm"
+        },
+        {
+          "name": "tim1",
+          "thickness": 3e-05,
+          "area": 0.000625,
+          "material": "liquid_metal_tim",
+          "notes": "Liquid metal interface"
+        },
+        {
+          "name": "ihs",
+          "thickness": 0.0015,
+          "area": 0.002025,
+          "material": "copper",
+          "notes": "Enhanced IHS - 45mm x 45mm"
+        },
+        {
+          "name": "tim2",
+          "thickness": 1e-05,
+          "area": 0.002025,
+          "material": "tim_high_performance",
+          "notes": "High performance TIM"
+        }
+      ]
+    },
+    "direct_die_cooling": {
+      "name": "Direct Die Cooling Configuration",
+      "layers": [
+        {
+          "name": "die",
+          "thickness": 0.000775,
+          "area": 0.0004,
+          "material": "silicon",
+          "notes": "Exposed die for direct cooling"
+        },
+        {
+          "name": "tim_direct",
+          "thickness": 1e-05,
+          "area": 0.0004,
+          "material": "tim_high_performance",
+          "notes": "Direct die to cooler interface"
+        }
+      ]
+    },
+    "TestCase_BS1": {
+      "name": "TestCase_BS1",
+      "layers": [
+        {
+          "name": "die",
+          "thickness": 0.000775,
+          "area": 0.0004,
+          "material": "silicon",
+          "notes": "Custom die"
+        },
+        {
+          "name": "TIM1",
+          "thickness": 0.0001,
+          "area": 0.0004,
+          "material": "tim_high_performance",
+          "notes": "meh"
+        },
+        {
+          "name": "TEstmaterial",
+          "thickness": 0.002,
+          "area": 0.0004,
+          "material": "unicorn_dust",
+          "notes": ""
+        },
+        {
+          "name": "Heatspreader",
+          "thickness": 0.001,
+          "area": 0.0008,
+          "material": "silicon",
+          "notes": ""
+        }
+      ]
+    }
+  },
+  "vapor_chamber_configs": {
+    "standard_vc": {
+      "name": "Standard Vapor Chamber",
+      "geometry": {
+        "effective_length": 0.1,
+        "vapor_area": 0.0001,
+        "wick_area": 0.0001,
+        "wick_thickness": 0.001,
+        "chamber_thickness": 0.003,
+        "evaporator_area": 0.0004,
+        "condenser_area": 0.002
+      },
+      "wick_properties": {
+        "thermal_conductivity": 50,
+        "pore_radius": 1e-05,
+        "porosity": 0.5,
+        "permeability": 1e-10
+      },
+      "units": {
+        "length": "m",
+        "area": "m\u00c2\u00b2",
+        "thermal_conductivity": "W/m\u00c2\u00b7K"
+      }
+    },
+    "ultra_thin_vc": {
+      "name": "Ultra-thin Vapor Chamber",
+      "geometry": {
+        "effective_length": 0.08,
+        "vapor_area": 5e-05,
+        "wick_area": 8e-05,
+        "wick_thickness": 0.0005,
+        "chamber_thickness": 0.0015,
+        "evaporator_area": 0.0004,
+        "condenser_area": 0.0016
+      },
+      "wick_properties": {
+        "thermal_conductivity": 100,
+        "pore_radius": 5e-06,
+        "porosity": 0.7,
+        "permeability": 5e-11
+      }
+    }
+  },
+  "heatsink_dimensions": {
+    "air_cooled": {
+      "small": {
+        "base_area": 0.01,
+        "fin_area": 0.1,
+        "fin_height": 0.03,
+        "fin_spacing": 0.002,
+        "fin_thickness": 0.001
+      },
+      "large": {
+        "base_area": 0.02,
+        "fin_area": 0.5,
+        "fin_height": 0.05,
+        "fin_spacing": 0.003,
+        "fin_thickness": 0.0015
+      }
+    },
+    "liquid_cooled": {
+      "cold_plate": {
+        "base_area": 0.0016,
+        "channel_width": 0.0005,
+        "channel_height": 0.001,
+        "channel_length": 0.1,
+        "num_channels": 50
+      },
+      "microchannel": {
+        "base_area": 0.0004,
+        "channel_width": 0.0001,
+        "channel_height": 0.0003,
+        "channel_length": 0.02,
+        "num_channels": 200
+      }
+    }
+  },
+  "surface_properties": {
+    "polished": {
+      "roughness_ra": 5e-08,
+      "contact_pressure": 1000000.0,
+      "effective_conductance": 50000
+    },
+    "machined": {
+      "roughness_ra": 1e-06,
+      "contact_pressure": 1000000.0,
+      "effective_conductance": 10000
+    },
+    "lapped": {
+      "roughness_ra": 2e-07,
+      "contact_pressure": 1000000.0,
+      "effective_conductance": 30000
+    }
+  },
+  "units": {
+    "thickness": "m",
+    "area": "m\u00c2\u00b2",
+    "roughness": "m",
+    "pressure": "Pa",
+    "conductance": "W/m\u00c2\u00b2\u00c2\u00b7K"
+  }
+}

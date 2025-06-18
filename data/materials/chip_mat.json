@@ -1,0 +1,228 @@
+{
+  "materials": {
+    "silicon": {
+      "name": "Silicon",
+      "thermal_conductivity": {
+        "value": 130,
+        "unit": "W/m\u00c2\u00b7K",
+        "temperature_ref": 300,
+        "temperature_coefficient": 0.8,
+        "notes": "Temperature-dependent: k(T) = k0 * (T0/T)^n"
+      },
+      "density": {
+        "value": 2330,
+        "unit": "kg/m\u00c2\u00b3"
+      },
+      "specific_heat": {
+        "value": 700,
+        "unit": "J/kg\u00c2\u00b7K"
+      },
+      "category": "semiconductor"
+    },
+    "copper": {
+      "name": "Copper",
+      "thermal_conductivity": {
+        "value": 385,
+        "unit": "W/m\u00c2\u00b7K",
+        "temperature_ref": 300
+      },
+      "density": {
+        "value": 8960,
+        "unit": "kg/m\u00c2\u00b3"
+      },
+      "specific_heat": {
+        "value": 385,
+        "unit": "J/kg\u00c2\u00b7K"
+      },
+      "category": "metal"
+    },
+    "aluminum": {
+      "name": "Aluminum",
+      "thermal_conductivity": {
+        "value": 205,
+        "unit": "W/m\u00c2\u00b7K",
+        "temperature_ref": 300
+      },
+      "density": {
+        "value": 2700,
+        "unit": "kg/m\u00c2\u00b3"
+      },
+      "specific_heat": {
+        "value": 900,
+        "unit": "J/kg\u00c2\u00b7K"
+      },
+      "category": "metal"
+    },
+    "tim_standard": {
+      "name": "Standard Thermal Interface Material",
+      "thermal_conductivity": {
+        "value": 5,
+        "unit": "W/m\u00c2\u00b7K"
+      },
+      "density": {
+        "value": 3000,
+        "unit": "kg/m\u00c2\u00b3"
+      },
+      "specific_heat": {
+        "value": 1000,
+        "unit": "J/kg\u00c2\u00b7K"
+      },
+      "category": "interface_material",
+      "contact_resistance": {
+        "value": 1e-05,
+        "unit": "m\u00c2\u00b2\u00c2\u00b7K/W"
+      }
+    },
+    "tim_high_performance": {
+      "name": "High Performance TIM",
+      "thermal_conductivity": {
+        "value": 12,
+        "unit": "W/m\u00c2\u00b7K"
+      },
+      "density": {
+        "value": 3500,
+        "unit": "kg/m\u00c2\u00b3"
+      },
+      "specific_heat": {
+        "value": 1000,
+        "unit": "J/kg\u00c2\u00b7K"
+      },
+      "category": "interface_material",
+      "contact_resistance": {
+        "value": 5e-06,
+        "unit": "m\u00c2\u00b2\u00c2\u00b7K/W"
+      }
+    },
+    "liquid_metal_tim": {
+      "name": "Liquid Metal TIM",
+      "thermal_conductivity": {
+        "value": 73,
+        "unit": "W/m\u00c2\u00b7K"
+      },
+      "density": {
+        "value": 6440,
+        "unit": "kg/m\u00c2\u00b3"
+      },
+      "specific_heat": {
+        "value": 400,
+        "unit": "J/kg\u00c2\u00b7K"
+      },
+      "category": "interface_material",
+      "contact_resistance": {
+        "value": 1e-06,
+        "unit": "m\u00c2\u00b2\u00c2\u00b7K/W"
+      }
+    },
+    "solder": {
+      "name": "Solder (SnAgCu)",
+      "thermal_conductivity": {
+        "value": 57,
+        "unit": "W/m\u00c2\u00b7K"
+      },
+      "density": {
+        "value": 7400,
+        "unit": "kg/m\u00c2\u00b3"
+      },
+      "specific_heat": {
+        "value": 220,
+        "unit": "J/kg\u00c2\u00b7K"
+      },
+      "category": "interface_material"
+    },
+    "unicorn_dust": {
+      "name": "Unicorn dust",
+      "thermal_conductivity": {
+        "value": 1000.0,
+        "unit": "W/m\u00b7K",
+        "temperature_ref": 300,
+        "temperature_coefficient": 0.5
+      },
+      "density": {
+        "value": 1000.0,
+        "unit": "kg/m\u00b3"
+      },
+      "specific_heat": {
+        "value": 2000.0,
+        "unit": "J/kg\u00b7K"
+      },
+      "category": "interface_material",
+      "contact_resistance": {
+        "value": 1e-05,
+        "unit": "m\u00b2\u00b7K/W"
+      }
+    }
+  },
+  "fluids": {
+    "water": {
+      "name": "Water",
+      "properties": {
+        "density_liquid": 1000,
+        "density_vapor": 0.6,
+        "latent_heat": 2260000.0,
+        "surface_tension": 0.072,
+        "viscosity_liquid": 0.001,
+        "specific_heat_liquid": 4180,
+        "prandtl_liquid": 7.0,
+        "saturation_temperature": 373,
+        "thermal_conductivity_liquid": 0.6
+      },
+      "units": {
+        "density": "kg/m\u00c2\u00b3",
+        "latent_heat": "J/kg",
+        "surface_tension": "N/m",
+        "viscosity": "Pa\u00c2\u00b7s",
+        "specific_heat": "J/kg\u00c2\u00b7K",
+        "temperature": "K",
+        "thermal_conductivity": "W/m\u00c2\u00b7K"
+      }
+    },
+    "dielectric_fluid": {
+      "name": "Dielectric Cooling Fluid",
+      "properties": {
+        "density_liquid": 1600,
+        "density_vapor": 13.5,
+        "latent_heat": 105000.0,
+        "surface_tension": 0.01,
+        "viscosity_liquid": 0.00064,
+        "specific_heat_liquid": 1100,
+        "prandtl_liquid": 8.9,
+        "saturation_temperature": 329,
+        "thermal_conductivity_liquid": 0.057
+      }
+    }
+  },
+  "cooling_parameters": {
+    "air": {
+      "natural_convection": {
+        "h_range": [
+          5,
+          25
+        ],
+        "unit": "W/m\u00c2\u00b2\u00c2\u00b7K"
+      },
+      "forced_convection": {
+        "h_range": [
+          25,
+          250
+        ],
+        "unit": "W/m\u00c2\u00b2\u00c2\u00b7K"
+      }
+    },
+    "liquid": {
+      "water_cooling": {
+        "h_range": [
+          1000,
+          10000
+        ],
+        "unit": "W/m\u00c2\u00b2\u00c2\u00b7K"
+      },
+      "microchannel": {
+        "h_range": [
+          10000,
+          100000
+        ],
+        "unit": "W/m\u00c2\u00b2\u00c2\u00b7K"
+      }
+    }
+  }
+}

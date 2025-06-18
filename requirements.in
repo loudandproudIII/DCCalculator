@@ -1,0 +1,8 @@
+# Add your high-level dependencies here 
+requests 
+ctREFPROP
+numpy
+matplotlib
+packaging
+PIL
+Pillow
